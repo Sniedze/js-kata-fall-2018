@@ -2,18 +2,18 @@
 const main = document.querySelector("main");
 const template = document.querySelector("#template");
 
-fetch("https://kea-alt-del.dk/twitter/api/")
+fetch("https://kea-alt-del.dk/twitter/api/?count=50/?hashtag=Javascript")
   .then(e => {
     return e.json();
   })
-  .then(showTweets);
+  .then(data => showTweets(data));
 
 function showTweets(data) {
-  data.forEach(data => {
+  data.statuses.forEach(data => {
     let clone = template.cloneNode(true).content;
 
-    clone.querySelector(".date").textContent = data.statuses.created_at;
-    clone.querySelector(".tweet-text").textContent = data.statuses.text;
-    section.appendChild(clone);
+    clone.querySelector(".date").textContent = data.created_at;
+    clone.querySelector(".tweet-text").textContent = data.text;
+    main.appendChild(clone);
   });
 }
