@@ -1,32 +1,48 @@
 #clock {
-    background-color: black;
-    color: red;
-    font-size: 90px;
-    display: flex;
+  background-color: black;
+  color: red;
+  font-size: 90px;
+  display: flex;
 }
-#clock>span {
-    display: flex;
+#clock > span {
+  display: flex;
 }
 
 .digit {
-    background-image: url(images/7segment.jpg);
-    width: 80px;
-    height: 134px;
+  background-image: url(images/7segment.jpg);
+  width: 80px;
+  height: 134px;
 }
 
 .digit0 {
-    background-position: 0px 0px;
+  background-position: 0px 0px;
 }
 
 .digit1 {
-    background-position: -100px 0px;
+  background-position: -100px 0px;
 }
-
-
-/* TODO: Make digits 2,3 and 4 */
+.digit2 {
+  background-position: -200px 0px;
+}
+.digit3 {
+  background-position: -300px 0px;
+}
+.digit4 {
+  background-position: -400px 0px;
+}
 
 .digit5 {
-    background-position: 0px -135px;
+  background-position: 0px -135px;
 }
-
-/* TODO: Make digits 6,7, 8 and 9 */
+.digit6 {
+  background-position: -100px -135px;
+}
+.digit7 {
+  background-position: -200px -135px;
+}
+.digit8 {
+  background-position: -300px -135px;
+}
+.digit9 {
+  background-position: -400px -135px;
+}
