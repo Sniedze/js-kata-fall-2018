@@ -6,7 +6,7 @@ const div = document.querySelector("div");
 
 setInterval(function() {
   fetchData();
-}, 3000);
+}, 10000);
 function fetchData() {
   fetch(link)
     .then(result => result.json())
