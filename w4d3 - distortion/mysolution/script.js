@@ -1,16 +1,16 @@
 "use strict";
 
 const link = "https://kea-alt-del.dk/kata-distortion/";
-window.addEventListener("DOMContentLoaded", setInterval);
+window.addEventListener("DOMContentLoaded", fetchData);
 const div = document.querySelector("div");
 
-setInterval(function() {
-  fetchData();
-}, 10000);
 function fetchData() {
   fetch(link)
     .then(result => result.json())
     .then(data => showNumber(data));
+  setInterval(function() {
+    fetchData();
+  }, 10000);
 }
 
 function showNumber(data) {
