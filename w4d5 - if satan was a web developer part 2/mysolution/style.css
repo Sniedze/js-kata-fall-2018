@@ -1,0 +1,28 @@
+body {
+  background-color: #182833;
+}
+
+div {
+  position: absolute;
+  top: 35%;
+  left: 32%;
+  width: 36vw;
+  height: 13vw;
+  background-color: #f8f6fa;
+}
+h1,
+h2 {
+  font-size: 2vw;
+  margin-left: 20px;
+}
+p,
+button {
+  font-size: 1.5vw;
+  margin-left: 20px;
+}
+button {
+  border-radius: 15%;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+}
