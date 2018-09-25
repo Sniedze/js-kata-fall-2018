@@ -1,0 +1,7 @@
+svg circle {
+  position: absolute;
+  transition: fill 0.1s linear;
+}
+body {
+  background-color: #1f3543;
+}
