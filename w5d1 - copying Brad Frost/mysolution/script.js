@@ -3,16 +3,19 @@ let i;
 let colors = ["#76752B", "#C23D3D", "#3C6783", "#431212", "#C2C133"];
 createBubbles(700);
 function createBubbles(amount) {
+  let g = document.createElementNS("http://www.w3.org/2000/svg", "g");
   for (i = 0; i < amount; i++) {
     let circle = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "circle"
     );
     circle.style.fill = colors[Math.floor(Math.random() * colors.length)];
-    let app = document.querySelector("svg");
-    app.appendChild(circle);
-    assignStyles();
+
+    g.appendChild(circle);
   }
+  let app = document.querySelector("svg");
+  app.appendChild(g);
+  assignStyles();
 }
 
 function assignStyles() {
