@@ -1,4 +1,5 @@
 "use strict";
+document.addEventListener("DOMContentLoaded", getTime);
 
 function addZero(i) {
   if (i < 10) {
@@ -39,9 +40,6 @@ let mDigitTwo = document.querySelector(".minutes span:nth-child(2)");
 let sDigitOne = document.querySelector(".seconds span:first-child");
 let sDigitTwo = document.querySelector(".seconds span:nth-child(2)");
 
-// console.log(hours0);
-// console.log(typeof hours0);
-
 let hDigitOneString = "digit".concat(hours0);
 let hDigitTwoString = "digit".concat(hours1);
 
@@ -51,17 +49,16 @@ let mDigitTwoString = "digit".concat(minutes1);
 let sDigitOneString = "digit".concat(seconds0);
 let sDigitTwoString = "digit".concat(seconds1);
 
-hDigitOne.classList.add(hDigitOneString);
-hDigitTwo.classList.add(hDigitTwoString);
+function getTime() {
+  hDigitOne.classList.add(hDigitOneString);
+  hDigitTwo.classList.add(hDigitTwoString);
 
-mDigitOne.classList.add(mDigitOneString);
-mDigitTwo.classList.add(mDigitTwoString);
+  mDigitOne.classList.add(mDigitOneString);
+  mDigitTwo.classList.add(mDigitTwoString);
 
-sDigitOne.classList.add(sDigitOneString);
-sDigitTwo.classList.add(sDigitTwoString);
-
-console.log(hDigitOne);
-console.log(typeof hDigitOne);
-
-// console.log(hours + ":" + minutes + ":" + seconds);
-// console.log(hours + ":" + minutes + ":" + seconds);
+  sDigitOne.classList.add(sDigitOneString);
+  sDigitTwo.classList.add(sDigitTwoString);
+  setInterval(function() {
+    getTime();
+  }, 1000);
+}

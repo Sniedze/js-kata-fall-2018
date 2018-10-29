@@ -17,7 +17,7 @@ function generateRolls() {
   values.totalRolls = X;
   for (let i = 0; i < X; i++) {
     rnd = 1 + Math.floor(Math.random() * 6);
-    values[rnd]++;
+    values[rnd] = values[rnd] + 1;
   }
 
   console.log(values);

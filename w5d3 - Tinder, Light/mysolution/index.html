@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <title>Tinder</title>
+    <style>
+        #profile {
+            position: relative;
+        }
+
+        article {
+            position: absolute;
+            width: 70vw;
+            height: 70vh;
+            top: 15vh;
+            left: 15vw;
+            background-color: antiquewhite
+        }
+
+        /* Hide the images by default */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="profile"></div>
+
+    <template>
+        <article>
+            <img>
+            <h2>Name</h2>
+            <h3>City</h3>
+            <p>Age</p>
+            <button class="interested"></button>
+            <button class="not-interested"></button><br>
+        </article>
+
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
